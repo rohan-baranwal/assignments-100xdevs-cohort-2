@@ -3,4 +3,13 @@
 */
 
 function wait(n) {
+    return new Promise((resolve, reject) => {
+        resolve(setTimeout(() => {
+            console.log("resolved")
+        }, n))
+    })
 }
+
+console.log("before promise")
+wait(2000);
+console.log("after promise")
